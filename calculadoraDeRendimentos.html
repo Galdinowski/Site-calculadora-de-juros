@@ -1,58 +1,84 @@
 <!DOCTYPE html>
 <html>
     <head>
-            <title>Calculadora de rendimentos</title>
+            <title>Calculadora de Rendimentos</title>
             <link href="style.css" rel="stylesheet">
     </head>
 
         <body id="paginaInicial">
             <h1 class="TituloRestantes">Calculadora de rendimentos</h1>
+         
+            <div class="corpo">
+
             
-            <table class="tabela-completa">
-                <thead>
-                    <tr>
-                        <th>Mes</th>
-                        <th>Rendimetos<br>(R$)</th>
-                        <th>Aporte</th>
-                        <th>Retirada <br>(%)</th>
-                        <th>Valor final</th>
-                    </tr>
-                </thead>
+                <form action=""class="calculadora">
+                    
+                    <table>
+                        <tbody>
+                                <thead>
+                                    <tr>
+                                        <td>Valor inicial: </th>
+                                        <td><input type="text"></th>
+                                    </tr>
+                                    <tr>
+                                        <td>Aporte mensal: </th>
+                                        <td><input type="text"></th>
+                                    </tr>
+                                    <tr>
+                                        <td>Rentabilidade(%): </th>
+                                        <td><input type="text"></th>
+                                    </tr>
+                                    </thead>
+                        </tbody>
+                    </table>
+                        <div><input class="botao" type="submit" value="Calcular"></div>
+                    
+                </form>
+                <table class="tabela-completa">
+                    <thead>
+                        <tr>
+                            <th>Mes</th>
+                            <th>Rendimetos<br>(R$)</th>
+                            <th>Aporte</th>
+                            <th>Retirada <br>(%)</th>
+                            <th>Valor final</th>
+                        </tr>
+                    </thead>
 
-                <body>
-                    <tr>
-                        <td>1</td>
-                        <td>1234</td>
-                        <td>3400</td>
-                        <td>0</td>
-                        <td>4584</td>
-                        
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>884</td>
-                        <td>880</td>
-                        <td>80</td>
-                        <td>9984</td>
-                        
-                    </tr>
-                        <th >
-                            total em <br> 1 mes
-                        </th>
-                        <th >
-                            rendimento acumulado <br> $
-                        </th>
-                        <th>Aportes <br>acumulados</th>
-                        <th>Retiradas totais</th>
-                        <th>Valor total acumulado <br>($)</th>
-                </body>
+                    <body>
+                        <tr>
+                            <td>1</td>
+                            <td>1234</td>
+                            <td>3400</td>
+                            <td>0</td>
+                            <td>4584</td>
+                            
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>884</td>
+                            <td>880</td>
+                            <td>80</td>
+                            <td>9984</td>
+                            
+                        </tr>
+                            <th >
+                                total em <br> 1 mes
+                            </th>
+                            <th >
+                                rendimento acumulado <br> $
+                            </th>
+                            <th>Aportes <br>acumulados</th>
+                            <th>Retiradas totais</th>
+                            <th>Valor total acumulado <br>($)</th>
+                    </body>
 
 
 
 
-            </table>
-            <br>
-
+                </table>
+                <br>
+            </div>
             <a id="hiperlink" href="index.html">Pagina Inicial</a>
 
 

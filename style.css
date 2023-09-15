@@ -24,15 +24,19 @@ tr{
     height:fit-content;
     width: fit-content;
     border-width: 2px;
-    border-style: solid
+    border-style: solid;
+    margin-top: 10px;
+    
     
 }
 
 #paginaInicial{
     background:url(https://uploads-ssl.webflow.com/637f1f4b4caf3815880f40db/63c08ec2ea2d8a6993ad041b_Bull%20Market%20v%20Bear%20Market%20blog%20image-p-1080.png) center/ cover no-repeat;
     position: relative;
+    overflow: hidden;
     height: 100vh;
     width: 100vw;
+
 }
 
 .paragrafos{
@@ -54,12 +58,31 @@ tr{
 .paginasRestantes{
     background: url(https://c0.wallpaperflare.com/path/225/48/918/bull-bear-bank-banking-7e3e6e8c1528c788da92533d7eee5d57.jpg) center/ cover no-repeat;
     position: relative;
+    top: 20px;
     height: 100vh;
     width: 100vw;
+    
 }
 
 .TituloRestantes{
         text-align: center;
         color: black;
 
+}
+
+.calculadora{
+    background-color: rgb(230, 200, 120);
+    align-items:center;
+    height: 300px;;
+    width: 600px;
+    border-width: 2px;
+    border-style: solid;
+    margin-top: 10px;
+}
+
+.corpo{
+    display: flex;
+    justify-content: center;
+
+    padding: 5vmin
 }
