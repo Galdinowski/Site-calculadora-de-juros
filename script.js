@@ -9,30 +9,26 @@ function geraResultado()
 
     //getmeses();
     //getValorInicial();
-    for (let i = 0; i < 4; i++) {
-      const column = document.createElement('td');
-      column.textContent = `Column ${i + 1}`;
-      const table = document.getElementById("tabelaCompleta"); 
-      table.appendChild(column);
-    }
 
-    // Create 4 table rows
-    for (let i = 0; i < 4; i++) {
-      const row = document.createElement('tr');
-  row.textContent = "Texto"
-      // Add the 4 table columns to the row
-      for (let j = 0; j < 4; j++) {
-        const cell = table.querySelector(`td:nth-child(${j + 1})`);
-        row.appendChild(cell);
-      }
+    for(let i = 1; i <= 6 ; i++)// linha
+    {
+            
 
-      // Add the row to the table
-      const table = document.getElementById("tabelaCompleta"); 
-      table.appendChild(row);
-      
-    }
+        const row = document.createElement('tr');
+        const table = document.getElementById("tabelaCompleta");
 
-    
+
+        
+         table.appendChild(row);
+
+          for (let j = 1; j <= 4; j++) {
+            const column = document.createElement('td');
+            column.textContent = `Conteudo na linha ${i},coluna ${j}`;
+            row.appendChild(column);
+            
+            }
+
+     }
    
 }
 

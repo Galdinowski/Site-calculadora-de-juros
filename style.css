@@ -7,6 +7,8 @@
 
 th{
     background-color: rgb(253, 213, 152);
+     width: 40vmin;
+     height: 3vmin;
     
        
 }
@@ -27,6 +29,7 @@ tr{
     border-width: 2px;
     border-style: solid;
     margin-top: 10px;
+    
     
     
 }
