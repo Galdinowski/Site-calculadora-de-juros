@@ -11,67 +11,35 @@
             <div class="corpo">
 
             
-                <form action=""class="calculadora">
+                <div action=""class="tabelacalculadora">
                     
                     <table>
                         <tbody>
                                 <thead>
                                     <tr>
-                                        <td>Valor inicial: </th>
-                                        <td><input type="text"></th>
+                                        <td>Valor inicial: </td>
+                                        <td><input type="number"></td>
                                     </tr>
                                     <tr>
-                                        <td>Aporte mensal: </th>
-                                        <td><input type="text"></th>
+                                        <td>Aporte mensal: </td>
+                                        <td><input type="number"></td>
                                     </tr>
                                     <tr>
-                                        <td>Rentabilidade(%): </th>
-                                        <td><input type="text"></th>
+                                        <td>Rentabilidade(%): </td>
+                                        <td><input type="number"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tempo(meses): </td>
+                                            <td><input type="number"></td>
                                     </tr>
                                     </thead>
                         </tbody>
                     </table>
-                        <div><input class="botao" type="submit" value="Calcular"></div>
+                        <input class="botao" type="submit" value="Calcular" id="calculadora",onclick='geraResultado()'>
                     
-                </form>
-                <table class="tabela-completa">
-                    <thead>
-                        <tr>
-                            <th>Mes</th>
-                            <th>Rendimetos<br>(R$)</th>
-                            <th>Aporte</th>
-                            <th>Retirada <br>(%)</th>
-                            <th>Valor final</th>
-                        </tr>
-                    </thead>
-
-                    <body>
-                        <tr>
-                            <td>1</td>
-                            <td>1234</td>
-                            <td>3400</td>
-                            <td>0</td>
-                            <td>4584</td>
-                            
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>884</td>
-                            <td>880</td>
-                            <td>80</td>
-                            <td>9984</td>
-                            
-                        </tr>
-                            <th >
-                                total em <br> 1 mes
-                            </th>
-                            <th >
-                                rendimento acumulado <br> $
-                            </th>
-                            <th>Aportes <br>acumulados</th>
-                            <th>Retiradas totais</th>
-                            <th>Valor total acumulado <br>($)</th>
-                    </body>
+                </div>
+                <table id="tabelaCompleta">
+                
 
 
 
@@ -81,7 +49,7 @@
             </div>
             <a id="hiperlink" href="index.html">Pagina Inicial</a>
 
-
+            <script src="script.js"></script>
         </body>
 
 </html>
