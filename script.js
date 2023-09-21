@@ -1,16 +1,29 @@
-const submitButton = document.getElementById("calculadora")
+const submitButton = document.querySelector("#calculadora")
   // Add an event listener to the submit button
-submitButton.addEventListener('click', geraResultado);
+
+    submitButton.addEventListener('click', function()
+    {
+              const tempoEmMes = document.querySelector('#meses');
+                      
+
+                      const mes = tempoEmMes.value;
+                      const valorTempoMensal = parseInt(mes);
+
+                     
+                      geraResultado(valorTempoMensal);
 
 
-function geraResultado()
+    });
+        
+
+function geraResultado(valorTempoMensal)
 {
 
 
     //getmeses();
     //getValorInicial();
 
-    for(let i = 1; i <= 6 ; i++)// linha
+    for(let i = 1; i <= valorTempoMensal; i++)// linha
     {
             
 
@@ -22,14 +35,28 @@ function geraResultado()
          table.appendChild(row);
 
           for (let j = 1; j <= 4; j++) {
-            const column = document.createElement('td');
-            column.textContent = `Conteudo na linha ${i},coluna ${j}`;
-            row.appendChild(column);
+              const column = document.createElement('td');
+              column.textContent = `Conteudo na linha ${i},coluna ${j}`;
+              row.appendChild(column);
+           
             
             }
 
      }
-   
+
+}
+
+function resetar(reset)
+{
+
+  const resultTd = document.querySelector('#resultado');
+  const resetButton = document.querySelector('#reset');
+
+      // Add an event listener to the reset button.
+      resetButton.addEventListener('click', function() {
+        // Set the textContent property of the <td> element to an empty string.
+          resultTd.textContent = '';
+});
 }
 
 

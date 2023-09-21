@@ -18,32 +18,33 @@
                                 <thead>
                                     <tr>
                                         <td>Valor inicial: </td>
-                                        <td><input type="number"></td>
+                                        <td><input type="number" id="valorIncial"></td>
                                     </tr>
                                     <tr>
                                         <td>Aporte mensal: </td>
-                                        <td><input type="number"></td>
+                                        <td><input type="number" id="aporteMensal"></td>
                                     </tr>
                                     <tr>
-                                        <td>Rentabilidade(%): </td>
-                                        <td><input type="number"></td>
+                                        <td>Rentabilidade: </td>
+                                        <td><input type="number" id="rentabilidade"></td>
                                     </tr>
                                     <tr>
                                         <td>Tempo(meses): </td>
-                                            <td><input type="number"></td>
+                                            <td><input type="number" id="meses"></td>
                                     </tr>
                                     </thead>
                         </tbody>
                     </table>
-                        <input class="botao" type="submit" value="Calcular" id="calculadora",onclick='geraResultado()'>
+                       <button class="botao" id="calculadora">Calcular</button>
+                       <button id="reset">Reset</button>
                     
                 </div>
                 <table id="tabelaCompleta">
                     <tr>
                         <th>Mes</th>
-                        <th>Valor inicial</th>
-                        <th>Rentabilidade (mensal)</th>
-                        <th>Valor final</th>
+                        <th>Valor inicial<br>(R$)</br></th>
+                        <th>Rentabilidade<br>(Mensal)</br></th>
+                        <th>Valor final<br>(R$)</br></th>
                     </tr>
 
 
