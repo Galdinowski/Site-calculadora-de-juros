@@ -1,6 +1,5 @@
 const submitButton = document.querySelector("#calculadora")
-  // Add an event listener to the submit button
-
+  
     submitButton.addEventListener('click', function()
     {
               const tempoEmMes = document.querySelector('#meses');
