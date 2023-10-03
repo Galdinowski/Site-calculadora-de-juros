@@ -6,55 +6,68 @@ const submitButton = document.querySelector("#calculadora")
               const tempoEmMes = document.querySelector('#meses');
                       
 
-                      const mes = tempoEmMes.value;
-                      const valorTempoMensal = parseInt(mes);
+               const mes = tempoEmMes.value;
+               const valorTempoMensal = parseInt(mes);
+              
+               geraResultado(valorTempoMensal);
 
-                     
-                      geraResultado(valorTempoMensal);
-
+          
+                      
+                         
 
     });
-        
 
 function geraResultado(valorTempoMensal)
 {
 
 
-    //getmeses();
-    //getValorInicial();
+    
+    const resultado = document.querySelector('#corpo');
+         if (resultado.textContent == '')
+         {
 
-    for(let i = 1; i <= valorTempoMensal; i++)// linha
-    {
-            
+            for(let i = 1; i <= valorTempoMensal; i++)// linha
+                  {
+                                      
+                              
+                      const row = document.createElement('tr');
+                      const table = document.getElementById("corpo");
 
-        const row = document.createElement('tr');
-        const table = document.getElementById("tabelaCompleta");
+
+                                  
+                       table.appendChild(row);
+
+                         for (let j = 1; j <= 4; j++) 
+                         {
+                                const column = document.createElement('td');
+                                column.textContent = `Conteudo na linha ${i},coluna ${j}`;
+                                row.appendChild(column);
+                                        
+                                    
+                                      
+                          }
+
+                  }
 
 
+         } else {  resultado.textContent = '';
+                
         
-         table.appendChild(row);
+        }
 
-          for (let j = 1; j <= 4; j++) {
-              const column = document.createElement('td');
-              column.textContent = `Conteudo na linha ${i},coluna ${j}`;
-              row.appendChild(column);
-           
-            
-            }
-
-     }
+                  
 
 }
 
-function resetar(reset)
+function resetar()
 {
 
-  const resultTd = document.querySelector('#resultado');
+  const resultTd = document.querySelector('#corpo')
   const resetButton = document.querySelector('#reset');
 
-      // Add an event listener to the reset button.
+      
       resetButton.addEventListener('click', function() {
-        // Set the textContent property of the <td> element to an empty string.
+       
           resultTd.textContent = '';
 });
 }
@@ -100,4 +113,7 @@ for (let i = 0; i < 4; i++)
   const table = document.getElementById("tabelaCompleta"); 
   table.appendChild(row);
 }
-}
+} 
+
+
+resetar();

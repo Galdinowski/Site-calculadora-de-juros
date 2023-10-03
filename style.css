@@ -86,9 +86,15 @@ tr{
     margin-top: 10px;
 }
 
-.corpo{
+.container{
     display: flex;
     justify-content: center;
 
     padding: 5vmin
+}
+
+
+.corpo
+{
+    flex-direction: column;
 }
