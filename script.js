@@ -9,7 +9,7 @@ const submitButton = document.querySelector("#calculadora")
                const valorTempoMensal = parseInt(mes);
               
                geraResultado(valorTempoMensal);
-
+                
           
                       
                          
@@ -31,6 +31,7 @@ function geraResultado(valorTempoMensal)
                               
                       const row = document.createElement('tr');
                       const table = document.getElementById("corpo");
+                      let tempomensal = i;
 
 
                                   
@@ -38,13 +39,41 @@ function geraResultado(valorTempoMensal)
 
                          for (let j = 1; j <= 4; j++) 
                          {
+                            if(j == 1)
+                              {
                                 const column = document.createElement('td');
-                                column.textContent = `Conteudo na linha ${i},coluna ${j}`;
+                                column.textContent = i;
                                 row.appendChild(column);
-                                        
+                              }
+                              else if(j == 2)
+                              {
+                                 
+                                   let valorIncial= getValorInicial();
+                                   const column = document.createElement('td');
+                                   column.textContent = valorIncial;
+                                   row.appendChild(column);
+                              }else if(j == 3)
+                                {
+                                  let rentabilidade= getRentabilidade();
+                                  const column = document.createElement('td');
+                                  column.textContent = (rentabilidade/12).toFixed(2);
+                                  row.appendChild(column);
+                               
+                                }else if (j == 4)
+                                  {
+                                      let valorF = getValorFinal();
+
+                                      column = document.createElement('td');
+                                      column.textContent = valorF;
+                                      row.appendChild(column);
+                                  }
+                                  
+                                       
                                     
                                       
                           }
+
+                          getmeses(tempomensal);
 
                   }
 
@@ -53,7 +82,8 @@ function geraResultado(valorTempoMensal)
                 
         
         }
-
+            
+        
                   
 
 }
@@ -75,44 +105,39 @@ function resetar()
 function getmeses()
 
 {
-
-  const column = document.createElement('td')
-  const palavra = document.createTextNode("Meses");
-  column.appendChild(palavra);
-  const table = document.getElementById("tabelaCompleta"); 
-  table.appendChild(column);
-
-for (let i = 0; i < 4; i++) 
-{
-  const row = document.createElement('tr');
-  const palavra = document.createTextNode(i);
-  row.appendChild(palavra);
-  const table = document.getElementById("tabelaCompleta"); 
-  table.appendChild(row);
-}
+  const tempo = tempomensal;
+   
+   return tempo;
+ 
 
 }
 
 function getValorInicial()
 {
-
-  let val = 10;
-
-  const column = document.createElement('td')
-  const palavra = document.createTextNode("Valor inicial");
-  column.appendChild(palavra);
-  const table = document.getElementById("tabelaCompleta"); 
-  table.appendChild(column);
-
-for (let i = 0; i < 4; i++) 
-{
-  const row = document.createElement('tr');
-  const palavra = document.createTextNode(val+i);
-  row.appendChild(palavra);
-  const table = document.getElementById("tabelaCompleta"); 
-  table.appendChild(row);
-}
+   const valorIncial = document.getElementById("valorIncial").value;
+   return parseFloat(valorIncial);
 } 
 
+function getRentabilidade()
+{
+  const rentabilidade = document.getElementById("rentabilidade").value;
 
+   return parseFloat(rentabilidade).toFixed(2);
+}
+
+
+function getValorFinal()
+{
+
+  let rentabilidade = getRentabilidade();
+  let tempoF = getmeses();
+  let valor = getValorInicial();
+  rentabilidade = (rentabilidade/100) + 1;
+  let jc = Math.pow(rentabilidade,tempoF);
+
+  
+  let valorFinal = valor * jc;
+
+  return valorFinal.toFixed(2);
+}
 resetar();
