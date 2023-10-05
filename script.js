@@ -9,6 +9,7 @@ const submitButton = document.querySelector("#calculadora")
                const valorTempoMensal = parseInt(mes);
               
                geraResultado(valorTempoMensal);
+               
                 
           
                       
@@ -32,7 +33,7 @@ function geraResultado(valorTempoMensal)
                       const row = document.createElement('tr');
                       const table = document.getElementById("corpo");
                       let tempomensal = i;
-
+                      getmeses(i);
 
                                   
                        table.appendChild(row);
@@ -61,7 +62,7 @@ function geraResultado(valorTempoMensal)
                                
                                 }else if (j == 4)
                                   {
-                                      let valorF = getValorFinal();
+                                      const valorF = getValorFinal()
 
                                       column = document.createElement('td');
                                       column.textContent = valorF;
@@ -104,10 +105,9 @@ function resetar()
 
 function getmeses()
 
-{
-  const tempo = tempomensal;
-   
-   return tempo;
+{     
+  const meses = document.querySelector("#meses").value;
+  return parseInt(meses);
  
 
 }
@@ -122,7 +122,7 @@ function getRentabilidade()
 {
   const rentabilidade = document.getElementById("rentabilidade").value;
 
-   return parseFloat(rentabilidade).toFixed(2);
+   return parseFloat(rentabilidade);
 }
 
 
@@ -130,10 +130,10 @@ function getValorFinal()
 {
 
   let rentabilidade = getRentabilidade();
-  let tempoF = getmeses();
+  let tempo = getmeses()
   let valor = getValorInicial();
   rentabilidade = (rentabilidade/100) + 1;
-  let jc = Math.pow(rentabilidade,tempoF);
+  let jc = Math.pow(rentabilidade,tempo);
 
   
   let valorFinal = valor * jc;
